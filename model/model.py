@@ -12,7 +12,8 @@ from sklearn.ensemble import RandomForestClassifier,GradientBoostingClassifier
 
 # Creating the GUI
 st.set_page_config(page_title = "Symptoms Checker", page_icon = ":male-doctor:", layout = "centered")
-st.title("Symptoms Checker and Recommendation System")
+st.title("HopeWell")
+st.header("Symptoms Checker and Recommendation System")
 st.info("This is a machine learning model which predicts potential disease based on the inputted symptoms and provides personalized recommendations for effective precautions, medicines, workout and diet to support proactive healthcare and wellness.")
 
 # importing datasets  
@@ -152,5 +153,6 @@ with st.container():
 
     # Signature
     st.markdown("Built with hope ~aas:heart:")
+
 
 
