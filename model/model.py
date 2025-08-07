@@ -16,7 +16,7 @@ st.title("Symptoms Checker and Recommendation System")
 st.info("This is a machine learning model which predicts potential disease based on the inputted symptoms and provides personalized recommendations for effective precautions, medicines, workout and diet to support proactive healthcare and wellness.")
 
 # importing datasets  
-dataset = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/Training.csv/Training.csv")
+dataset = pd.read_csv("datasets/Training.csv/Training.csv")
 sym_des = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/symtoms_df.csv")
 precautions = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/precautions_df.csv")
 workout = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/workout_df.csv")
@@ -152,3 +152,4 @@ with st.container():
 
     # Signature
     st.markdown("Built with hope ~aas:heart:")
+
