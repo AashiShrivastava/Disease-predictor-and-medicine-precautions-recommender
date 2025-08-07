@@ -17,12 +17,12 @@ st.info("This is a machine learning model which predicts potential disease based
 
 # importing datasets  
 dataset = pd.read_csv("datasets/Training.csv/Training.csv")
-sym_des = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/symtoms_df.csv")
-precautions = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/precautions_df.csv")
-workout = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/workout_df.csv")
-description = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/description.csv")
-medications = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/medications.csv")
-diets = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/diets.csv")
+sym_des = pd.read_csv("datasets/symtoms_df.csv")
+precautions = pd.read_csv("datasets/precautions_df.csv")
+workout = pd.read_csv("datasets/workout_df.csv")
+description = pd.read_csv("datasets/description.csv")
+medications = pd.read_csv("datasets/medications.csv")
+diets = pd.read_csv("datasets/diets.csv")
 
 # Assigning numerical value to each symptom
 symptoms_dict = {}
@@ -83,8 +83,8 @@ svc.fit(X_train,y_train)
 ypred = svc.predict(X_test)
 accuracy_score(y_test,ypred)
 
-pickle.dump(svc,open("C:/Users/hp/Desktop/Disease_Predictor/datasets/svc.pkl",'wb'))
-svc=pickle.load(open("C:/Users/hp/Desktop/Disease_Predictor/datasets/svc.pkl",'rb'))
+pickle.dump(svc,open("datasets/svc.pkl",'wb'))
+svc=pickle.load(open("datasets/svc.pkl",'rb'))
 
 # model prediction function
 def get_predicted_value(patient_symptoms):
@@ -152,4 +152,5 @@ with st.container():
 
     # Signature
     st.markdown("Built with hope ~aas:heart:")
+
 
