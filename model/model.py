@@ -16,13 +16,13 @@ st.title("Symptoms Checker and Recommendation System")
 st.info("This is a machine learning model which predicts potential disease based on the inputted symptoms and provides personalized recommendations for effective precautions, medicines, workout and diet to support proactive healthcare and wellness.")
 
 # importing datasets  
-dataset = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/Training.csv/Training.csv")
-sym_des = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/symtoms_df.csv")
-precautions = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/precautions_df.csv")
-workout = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/workout_df.csv")
-description = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/description.csv")
-medications = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/medications.csv")
-diets = pd.read_csv("C:/Users/Aashi/Desktop/Disease_Predictor/datasets/diets.csv")
+dataset = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/Training.csv/Training.csv")
+sym_des = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/symtoms_df.csv")
+precautions = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/precautions_df.csv")
+workout = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/workout_df.csv")
+description = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/description.csv")
+medications = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/medications.csv")
+diets = pd.read_csv("C:/Users/hp/Desktop/Disease_Predictor/datasets/diets.csv")
 
 # Assigning numerical value to each symptom
 symptoms_dict = {}
@@ -83,8 +83,8 @@ svc.fit(X_train,y_train)
 ypred = svc.predict(X_test)
 accuracy_score(y_test,ypred)
 
-pickle.dump(svc,open("C:/Users/Aashi/Downloads/HiWe_Project/svc.pkl",'wb'))
-svc=pickle.load(open("C:/Users/Aashi/Downloads/HiWe_Project/svc.pkl",'rb'))
+pickle.dump(svc,open("C:/Users/hp/Desktop/Disease_Predictor/datasets/svc.pkl",'wb'))
+svc=pickle.load(open("C:/Users/hp/Desktop/Disease_Predictor/datasets/svc.pkl",'rb'))
 
 # model prediction function
 def get_predicted_value(patient_symptoms):
@@ -152,4 +152,3 @@ with st.container():
 
     # Signature
     st.markdown("Built with hope ~aas:heart:")
-
